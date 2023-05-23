@@ -15,7 +15,9 @@ const useResturant = (id) => {
         const response = await fetch(RESTURANT_DETAILS_URL+id);
         
         const result = await response.json();
-        setResturantMenu(result?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+    
+        setResturantMenu(result?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+        console.log("api call");
         setResturant(result?.data?.cards[0]?.card?.card?.info);
     }
     catch(e){

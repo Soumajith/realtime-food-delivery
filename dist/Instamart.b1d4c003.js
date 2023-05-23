@@ -143,8 +143,8 @@
     }
   }
 })({"1xC6H":[function(require,module,exports) {
-var Refresh = require("b9d8d601d8db980a");
-var ErrorOverlay = require("f16ad2ed1df16f8");
+var Refresh = require("24ddb525ced5c305");
+var ErrorOverlay = require("8a522e1afed103c6");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -163,7 +163,7 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"b9d8d601d8db980a":"786KC","f16ad2ed1df16f8":"1dldy"}],"gTIPm":[function(require,module,exports) {
+},{"24ddb525ced5c305":"786KC","8a522e1afed103c6":"1dldy"}],"gTIPm":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;

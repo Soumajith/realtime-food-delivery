@@ -58,7 +58,7 @@ const Body = () => {
     { (allresturants?.length === 0) ? 
     <Shimmer />
     :
-    <div className="restraunt-list">
+    <div className="flex justify-center flex-wrap gap-4">
         
         {(filteredresturants?.length === 0) ? 
 

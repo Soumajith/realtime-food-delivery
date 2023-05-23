@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 export const Title = () => {
-    return <h1>Food Villa</h1>
+    return <h1 className="text-3xl">Food Villa</h1>
 }
 
 const LoggedInUser = () => {
@@ -11,15 +12,15 @@ const LoggedInUser = () => {
 const Header = () => {
     
     const [loggedIn, setLoggedIn] = useState(false);
-
-    return <div className="header">
+    const cartItems = useSelector((store)=> store.cart.items)
+    return <div className="flex justify-between p-5">
         <Title/>
-        <div className="nav-items">
-            <ul>
+        <div>
+            <ul className="flex justify-evenly gap-4">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/cart">Cart</Link></li> 
+                <li><Link to="/cart">Cart {cartItems.length}</Link></li> 
             </ul>
         </div>
         <div className="authentication">
